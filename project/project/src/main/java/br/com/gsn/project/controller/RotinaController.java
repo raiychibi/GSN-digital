@@ -5,10 +5,7 @@ import br.com.gsn.project.mapper.RotinaMapper;
 import br.com.gsn.project.service.RotinaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/rotina")
@@ -25,6 +22,16 @@ public class RotinaController {
         }catch (Exception e){
             System.out.println(e.getMessage());
             return ResponseEntity.internalServerError().build();
+        }
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<RotinaDto> deletarRotina(@PathVariable(value = "id")Long id){
+        try{
+            rotinaService.deletar(id);
+            return ResponseEntity.noContent().build();
+        }catch (Exception e){
+            return ResponseEntity.notFound().build();
         }
     }
 
