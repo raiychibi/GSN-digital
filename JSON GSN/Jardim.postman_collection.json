@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "628d0df3-6288-445f-9e3f-03a28e7a0f7e",
+		"name": "Jardim",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Jardim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jardim da Rai\",\r\n    \"number\": \"2\",\r\n    \"plantas\": [\r\n        {\r\n    \"name\": \"Samambaia\",\r\n    \"irrigacao\": \"252.5\",\r\n    \"iluminacao1\": \"2022-09-12T13:00:00.000\",\r\n    \"iluminacao2\": \"2022-09-12T13:30:00.000\"\r\n        },\r\n          {\r\n    \"name\": \"Samambaia\",\r\n    \"irrigacao\": \"252.5\",\r\n    \"iluminacao1\": \"2022-09-12T13:00:00.000\",\r\n    \"iluminacao2\": \"2022-09-12T13:30:00.000\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}api/jardim",
+					"host": [
+						"{{local}}api"
+					],
+					"path": [
+						"jardim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jardim",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}api/jardim/1",
+					"host": [
+						"{{local}}api"
+					],
+					"path": [
+						"jardim",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jardim",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Jardim",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{local}}api/jardim",
+					"host": [
+						"{{local}}api"
+					],
+					"path": [
+						"jardim"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
